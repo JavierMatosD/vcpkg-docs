@@ -12,7 +12,7 @@ Configure a Make-based project.
 ```cmake
 vcpkg_make_configure(
     SOURCE_PATH <source-path>
-    [AUTOCONFIG]
+    [AUTORECONF]
     [COPY_SOURCE]
     [DISABLE_MSVC_WRAPPERS]
     [DISABLE_CPPFLAGS]
@@ -45,7 +45,7 @@ The directory containing the project's source files.
 
 This value is usually obtained as a result of calling a source acquisition command like [`vcpkg_from_github()`](vcpkg_from_github.md).
 
-### AUTOCONFIG
+### AUTORECONF
 
 Runs autoreconf when set.
 
@@ -197,7 +197,7 @@ See,
 ```cmake
 vcpkg_make_configure(
     SOURCE_PATH "/path/to/source"
-    LANGUAGES "C;CXX;Fortran"
+    LANGUAGES "C" "CXX" "Fortran"
 )
 ```
 
